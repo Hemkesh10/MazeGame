@@ -6,6 +6,7 @@ using UnityEngine;
 public class playerScript : MonoBehaviour
 {
     public int points = 0;
+    public int health = 3;
     
     // Start is called before the first frame update
     void Start()
@@ -21,6 +22,7 @@ public class playerScript : MonoBehaviour
 
     private void OnGUI()
     {
-        GUI.Label(new Rect(10, 10, 100, 20), "Score : " + points);
+        GUI.Label(new Rect(10, 10, 100, 20), "Score : " + points + "/5");
+        GUI.Label(new Rect(10, 25, 100, 20), "health : " + health + "/3");
     }
 }
